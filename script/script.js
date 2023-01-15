@@ -55,8 +55,8 @@ function getUser() {
       followingEl.innerHTML = `<span>Following</span> ${data.following}`;
 
       // repo & gist
-      repoEl.innerHTML = `<span>Repositories</span> ${data.public_gists}`;
-      gistEl.innerHTML = `<span>Public Gists</span> ${data.public_repos}`;
+      repoEl.innerHTML = `<span>Repositories</span> ${data.public_repos}`;
+      gistEl.innerHTML = `<span>Public Gists</span> ${data.public_gists}`;
 
       // location
       if (data.location === null) {
