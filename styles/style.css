@@ -63,10 +63,10 @@ input {
   padding: 0.75rem 0 0.75rem 1rem;
   border-radius: 25px;
   border: none;
-  background-image: linear-gradient(
-    105.3deg,
-    rgba(30, 39, 107, 1) 21.8%,
-    rgba(77, 118, 221, 1) 100.2%
+  background-image: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    rgba(0, 107, 141, 1) 0%,
+    rgba(0, 69, 91, 1) 90%
   );
   box-shadow: var(--box-shadow);
   text-transform: capitalize;
@@ -178,10 +178,11 @@ button:hover .arrow:before {
 /* profile */
 .card {
   background-image: radial-gradient(
-    circle 757px at 14.6% 44.8%,
-    rgba(60, 77, 115, 1) 27.7%,
-    rgba(0, 194, 209, 1) 95.9%
+    circle farthest-corner at 10% 20%,
+    rgba(0, 149, 218, 0.85) 9.9%,
+    rgba(56, 80, 114, 1) 100.3%
   );
+  background-position: center;
   padding: 4rem 1rem 0.5rem 1rem;
   border-radius: 10px;
   box-shadow: var(--box-shadow);
@@ -193,11 +194,11 @@ button:hover .arrow:before {
   font-size: 1rem;
   font-weight: 500;
   margin-bottom: 2rem;
-  color: #1d263b;
+  color: #210b2c;
 }
 
 h3 {
-  color: #13293d;
+  color: #04052e;
 }
 
 h3,
@@ -245,8 +246,7 @@ span {
 .location {
   margin-top: 1rem;
   font-weight: 600;
-  color: #5f758e;
-  color: #13293d;
+  color: #868b91;
 }
 
 .hidden {
