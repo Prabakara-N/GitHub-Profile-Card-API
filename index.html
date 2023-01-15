@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Custom Favicon -->
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
+
+    <title>GitHub Profile Cards</title>
+
+    <!-- FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!--normalize CSS -->
+    <link rel="stylesheet" href="./styles/normalize.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <!-- input -->
+    <h1 class="title">GitHub <i class="fa-brands fa-github"></i></h1>
+    <div class="input-container">
+      <div class="input-flex">
+        <input type="text" id="user-input" placeholder="Enter a name..." />
+        <i class="fa-solid fa-magnifying-glass icon-search"></i>
+      </div>
+      <!-- btn -->
+      <button id="btn">
+        Search
+        <div class="arrow-wrapper">
+          <div class="arrow"></div>
+        </div>
+      </button>
+    </div>
+
+    <!-- loader -->
+    <span class="loader"></span>
+
+    <!-- profile -->
+    <div class="hidden">
+      <div class="user-img" id="profile">
+        <img
+          class="img"
+          src=" 
+        https://avatars.githubusercontent.com/u/113981087?v=4 "
+          alt="profile-pic"
+        />
+      </div>
+
+      <!-- card -->
+      <div class="card">
+        <h3 class="name">
+          <i class="fa-brands fa-github name-icon"></i> Prabakaran
+        </h3>
+        <p class="bio">Web Developer</p>
+        <!-- followers details -->
+        <div class="follower-container">
+          <div class="follower flex" id="followers">
+            <span>Followers</span> 1
+          </div>
+          <div class="following flex" id="following">
+            <span>Following</span> 1
+          </div>
+        </div>
+        <!-- repo container -->
+        <div class="repo-container">
+          <div class="repo flex" id="repo"><span>Repositories</span> 38</div>
+          <div class="gist flex" id="gist"><span>Public Gists</span> 0</div>
+        </div>
+        <!-- location -->
+        <p class="location" id="location">
+          <i class="fa-solid fa-location-dot"></i> Tiruppur
+        </p>
+      </div>
+    </div>
+
+    <!-- social icons -->
+    <div class="social-icon">
+      <a href="https://www.instagram.com/swag__55__/"
+        ><i class="fa-brands fa-instagram icons"></i
+      ></a>
+      <a href="https://www.linkedin.com/in/prabakaran-m-105289219/"
+        ><i class="fa-brands fa-linkedin icons"></i
+      ></a>
+      <a href="https://github.com/Prabakara-N"
+        ><i class="fa-brands fa-github icons"></i
+      ></a>
+    </div>
+    <!-- Custom JavaScript -->
+    <script src="./script/script.js"></script>
+  </body>
+</html>
