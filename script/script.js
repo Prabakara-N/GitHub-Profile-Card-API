@@ -13,8 +13,6 @@ const gistEl = document.getElementById("gist");
 const locationEl = document.getElementById("location");
 const hiddenEl = document.querySelector(".hidden");
 
-// kishorebabu420
-
 // functions
 function getUser() {
   // api
@@ -22,6 +20,7 @@ function getUser() {
   fetch(`https://api.github.com/users/${userName}`)
     .then((resp) => {
       if (!resp.ok) {
+        hiddenEl.style.visibility = "hidden";
         alert("User Not Found...SORRY!!!");
       }
       return resp.json();
@@ -67,6 +66,7 @@ function getUser() {
     });
 }
 
+// event listneres
 btnsearch.addEventListener("click", () => {
   if (inputEl.value === "") {
     alert("Please Enter A Valid GitHub Name...");
@@ -77,11 +77,16 @@ btnsearch.addEventListener("click", () => {
   }
 });
 
-// event listneres
+// enter key
 inputEl.addEventListener("keyup", (e) => {
   if (e.key === "Enter") {
-    hiddenEl.style.visibility = "visible";
-    getUser();
+    if (inputEl.value === "") {
+      alert("Please Enter A Valid GitHub Name...");
+      hiddenEl.style.visibility = "hidden";
+    } else {
+      hiddenEl.style.visibility = "visible";
+      getUser();
+    }
   }
 });
 
