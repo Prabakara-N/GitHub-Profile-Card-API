@@ -63,11 +63,7 @@ input {
   padding: 0.75rem 0 0.75rem 1rem;
   border-radius: 25px;
   border: none;
-  background-image: radial-gradient(
-    circle farthest-corner at 10% 20%,
-    rgba(0, 107, 141, 1) 0%,
-    rgba(0, 69, 91, 1) 90%
-  );
+  background-color: #001f54;
   box-shadow: var(--box-shadow);
   text-transform: capitalize;
 }
@@ -220,8 +216,8 @@ p {
   justify-content: space-around;
   text-align: center;
   margin-bottom: 1rem;
-  color: #282727;
-  font-weight: 800;
+  font-weight: 700;
+  color: aliceblue;
 }
 
 span {
@@ -229,6 +225,7 @@ span {
   padding-bottom: 2px;
   font-weight: 600;
   color: rgb(197, 192, 192);
+  color: #0a1128;
 }
 
 .user-img {
@@ -246,7 +243,7 @@ span {
 .location {
   margin-top: 1rem;
   font-weight: 600;
-  color: #868b91;
+  color: #c6c8ca;
 }
 
 .hidden {
