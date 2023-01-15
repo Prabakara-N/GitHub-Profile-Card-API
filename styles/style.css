@@ -43,7 +43,8 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
-  background-image: url(../images/bg\ img.jpg);
+  /* background-image: url(../images/bg\ img.jpg); */
+  background-image: url(../images/bg\ img\ main.jpg);
   background-position: center;
   background-size: cover;
   min-height: 100vh;
