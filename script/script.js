@@ -22,8 +22,6 @@ function getUser() {
   fetch(`https://api.github.com/users/${userName}`)
     .then((resp) => {
       if (!resp.ok) {
-        hiddenEl.style.visibility = "hidden";
-        inputEl.value = "";
         alert("User Not Found...SORRY!!!");
         throw new Error("No Profile found !!!");
       }
@@ -74,6 +72,7 @@ function displayResults(data) {
     locationEl.innerHTML = `<i class="fa-solid fa-location-dot"></i> ${data.location}`;
   }
 
+  // to make card visible after getting all output
   hiddenEl.style.visibility = "visible";
 }
 
