@@ -1,6 +1,6 @@
 "use strict";
-// elements
 
+// elements
 const inputEl = document.getElementById("user-input");
 const btnsearch = document.getElementById("btn");
 const profileEl = document.getElementById("profile");
@@ -12,8 +12,10 @@ const repoEl = document.getElementById("repo");
 const gistEl = document.getElementById("gist");
 const locationEl = document.getElementById("location");
 const hiddenEl = document.querySelector(".hidden");
+const loading = document.querySelector(".loader");
 
 // functions
+// get data
 function getUser() {
   // api
   let userName = inputEl.value;
@@ -32,6 +34,7 @@ function getUser() {
     });
 }
 
+// to display the output
 function displayResults(data) {
   // profile pic
   profileEl.innerHTML = `<div class="user-img" id="profile">
@@ -74,14 +77,21 @@ function displayResults(data) {
   hiddenEl.style.visibility = "visible";
 }
 
+function setTime() {
+  setTimeout(() => {
+    loading.style.display = "none";
+    getUser();
+  }, 1500);
+}
+
 // event listneres
 btnsearch.addEventListener("click", () => {
   if (inputEl.value === "") {
     alert("Please Enter A Valid GitHub Name...");
-    // hiddenEl.style.visibility = "hidden";
   } else {
-    // hiddenEl.style.visibility = "visible";
-    getUser();
+    hiddenEl.style.visibility = "hidden";
+    loading.style.display = "block";
+    setTime();
   }
 });
 
@@ -90,15 +100,15 @@ inputEl.addEventListener("keyup", (e) => {
   if (e.key === "Enter") {
     if (inputEl.value === "") {
       alert("Please Enter A Valid GitHub Name...");
-      // hiddenEl.style.visibility = "hidden";
     } else {
-      getUser();
+      hiddenEl.style.visibility = "hidden";
+      loading.style.display = "block";
+      setTime();
     }
   }
 });
 
 // loading anime
 window.addEventListener("load", () => {
-  const loading = document.querySelector(".loader");
   loading.style.display = "none";
 });
