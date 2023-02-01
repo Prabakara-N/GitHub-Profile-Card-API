@@ -11,6 +11,7 @@ const followingEl = document.getElementById("following");
 const repoEl = document.getElementById("repo");
 const gistEl = document.getElementById("gist");
 const locationEl = document.getElementById("location");
+const visitBtn = document.getElementById("visit-btn");
 const hiddenEl = document.querySelector(".hidden");
 const loading = document.querySelector(".loader");
 
@@ -72,8 +73,15 @@ function displayResults(data) {
     locationEl.innerHTML = `<i class="fa-solid fa-location-dot"></i> ${data.location}`;
   }
 
+  // visit button
+  visitBtn.innerHTML = ` <a href=${data.html_url}
+  >Visit Profile <i class="fa-solid fa-arrow-up-right-from-square"></i
+></a>`;
+
   // to make card visible after getting all output
   hiddenEl.style.visibility = "visible";
+
+  visitBtn.style.display = "block";
 }
 
 function setTime() {
@@ -90,6 +98,7 @@ btnsearch.addEventListener("click", () => {
   } else {
     hiddenEl.style.visibility = "hidden";
     loading.style.display = "block";
+    visitBtn.style.display = "none";
     setTime();
   }
 });
@@ -102,6 +111,7 @@ inputEl.addEventListener("keyup", (e) => {
     } else {
       hiddenEl.style.visibility = "hidden";
       loading.style.display = "block";
+      visitBtn.style.display = "none";
       setTime();
     }
   }
